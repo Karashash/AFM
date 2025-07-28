@@ -1,0 +1,23 @@
+scraping:
+  keywords: ["AI in healthcare", "medical AI", "healthcare machine learning"]
+  rss_feeds:
+    - https://www.sciencedaily.com/rss/health_medicine/artificial_intelligence.xml
+    - https://aiin.healthcare/rss.xml
+    - https://www.healthcareitnews.com/ai-analytics/feed
+  max_per_source: 60
+
+models:
+  embedder: all-MiniLM-L6-v2
+  llm:
+    provider: ollama
+    model: mistral:7b-instruct
+
+clustering:
+  method: kmeans
+  k: 8
+
+summary:
+  tokens_per_article: 512
+
+meta:
+  target_words: 6000
